@@ -2,6 +2,7 @@ import React from 'react';
 import reactDom from 'react-dom';
 // const element = React.createElement('h1', null, 'Hello, World!');
 
+// element ceate
 const index = 0;
 
 const element = (
