@@ -13,7 +13,7 @@ const withCounter = ( OriginalComponent) =>{
         }
         render(){
             const { count   } = this.state;
-            return <OriginalComponent  count = {count} IncreamentCount={this.IncreamentCount} />
+            return <OriginalComponent  count = {count} increamentCount={this.IncreamentCount} />
 
         }
     }

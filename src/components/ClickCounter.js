@@ -1,10 +1,10 @@
 import withCounter from "./HOC/withCounter";
 
 const  ClickCounter = (props) => {
-const {  count, IncreamentCount } = props;
+const {  count, increamentCount } = props;
     return(
         <div>
-            <button type="button" onClick={ IncreamentCount}>Clicked {count } times</button>
+            <button type="button" onClick={ increamentCount}>Clicked {count } times</button>
         </div>
     )
 
