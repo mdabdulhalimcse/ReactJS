@@ -1,12 +1,20 @@
 import React from 'react';
-import Calculator from './componets/Calculator';
+import Bracket from './componets/composition/Bracket';
+import Emoji from './componets/composition/Emoji';
+import Text from './componets/composition/Text';
 
 function AppShow(){
     return(
-    <div>
-<h1>Welcome to AppShow page </h1>
-<Calculator />
-    </div>
+//{/* <Emoji>{({ addEmoji }) => <Text addEmoji={addEmoji} />}</Emoji> */}
+<Emoji>
+    {({addEmoji}) =>(
+        <Bracket>
+        {({addBracket}) => <Text addEmoji={addEmoji} addBracket={addBracket} />}
+        </Bracket>
+    )
+
+    }
+</Emoji>
     );
 }
 export default AppShow;
