@@ -1,4 +1,4 @@
-import withCounter from "../components/HOC/withCounter";
+import withCounter from "./withCounter";
 
 const HoverCount = ({count, increamentCount})=>{
     return(

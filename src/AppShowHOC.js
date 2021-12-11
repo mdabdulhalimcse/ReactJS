@@ -1,6 +1,6 @@
 import React from 'react';
-import ClickCounter from './components/ClickCounter';
-import HoverCount from './components/HoverCount';
+import ClickCounter from './components/HOC/ClickCounter';
+import HoverCount from './components/HOC/HoverCount';
 
 function AppShow(){
     return(
