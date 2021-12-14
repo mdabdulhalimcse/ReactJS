@@ -2,7 +2,7 @@ import React from 'react';
 import ClickCounter from './components/HOC/ClickCounter';
 import HoverCount from './components/HOC/HoverCount';
 
-function AppShow(){
+function AppShowHOC(){
     return(
 <di>
     <ClickCounter />
@@ -10,4 +10,4 @@ function AppShow(){
 </di>
     );
 }
-export default AppShow;
+export default AppShowHOC;
