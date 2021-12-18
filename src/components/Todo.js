@@ -6,12 +6,12 @@ export default function Todo() {
 
     const handleInput = (e) => {
         const inputValue = e.target.value;
-        const warning = inputValue.includes('.js')
+        const updatedWarning = inputValue.includes('.js')
         ? 'You need JavaScript skill to complete the task. Do you have it.?'
         : null;
 
        setTodo(inputValue);
-       setWarning(warning);
+       setWarning(updatedWarning);
     }
 
     return(
