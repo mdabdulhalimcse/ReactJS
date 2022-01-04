@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Todo() {
+ function Todo() {
     const [todo, setTodo] = useState('');
     const [warning, setWarning] = useState(null);
 
@@ -26,3 +26,5 @@ export default function Todo() {
     </div>
     )
 }
+
+export default Todo;
