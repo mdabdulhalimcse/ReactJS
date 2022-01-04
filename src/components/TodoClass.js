@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class Todo extends React.Component{
+export default class TodoClass extends React.Component{
     state = {
         todo: '',
         warning:null,
@@ -21,6 +21,7 @@ export default class Todo extends React.Component{
         const {todo, warning} = this.state;
         return (
             <div>
+                <h2>Welcome to TodoClass Component</h2>
                 <p>{todo}</p>
                 <p>
                     <textarea name='todo' value={todo} onChange={this.handleInput} />

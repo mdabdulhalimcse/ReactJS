@@ -16,6 +16,7 @@ export default function Todo() {
 
     return(
         <div>
+            <h2>Welcome to Todo Functional Component</h2>
         <p>{todo}</p>
         <p>
             <textarea name='todo' value={todo} onChange={handleInput} />

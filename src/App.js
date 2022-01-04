@@ -9,7 +9,6 @@ export default class AppShowRenderProps extends React.Component{
        
         return(
           <div>
-            {/* <Todo /> */}
             <Todo />
           </div>
         );
