@@ -1,6 +1,6 @@
 import React from "react";
 import './App.css';
-import MyClassComponent from "./components/MyClassComponent";
+import MyComponent from "./components/MyComponent";
 
 export default class App extends React.Component{
 
@@ -9,7 +9,7 @@ export default class App extends React.Component{
         return(
           <div>
       <p>We </p>
-      <MyClassComponent />
+      <MyComponent />
           </div>
         );
     }
