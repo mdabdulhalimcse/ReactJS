@@ -5,6 +5,7 @@ export default function MyComponent (){
     const [date, setDate] = useState(new Date());
 
     const tick = () =>{
+        console.log('Starting timer clock');
         setDate(new Date());
     }
 
@@ -15,7 +16,11 @@ export default function MyComponent (){
 
     useEffect(() =>{
         console.log('Starting timer clock');
-        setInterval(tick,1000);
+        const interval = setInterval(tick,1000);
+
+        return () => {
+            console.log('component unmount!');
+        }
     },[]);
 
     const addClick = () => {
