@@ -1,17 +1,15 @@
 import React from "react";
 import './App.css';
-import Counter from './components/Counter';
-import Todo from "./components/Todo";
+import MyClassComponent from "./components/MyClassComponent";
 
-export default class AppShowRenderProps extends React.Component{
-    
- 
+export default class App extends React.Component{
+
     render(){
        
         return(
           <div>
-            <Todo />
-            <Counter />
+      <p>We </p>
+      <MyClassComponent />
           </div>
         );
     }
