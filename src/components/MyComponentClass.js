@@ -1,6 +1,6 @@
 import React from "react";
 
-export default class MyClassComponent extends React.Component{
+export default class MyComponentClass extends React.Component{
     state = {
         count: 0,
         date: new Date(),
@@ -9,7 +9,12 @@ export default class MyClassComponent extends React.Component{
       componentDidMount(){
           const {count} = this.state;
           document.title = `Clicked ${count} times`;
-          setInterval (this.tick,1000);
+          this.interval = setInterval (this.tick,1000);
+      }
+
+      componentWillUnmount(){
+          console.log('component will unmount');
+          clearInterval(this.interval);
       }
 
       componentDidUpdate(){
@@ -23,13 +28,14 @@ export default class MyClassComponent extends React.Component{
           }))
       }
       tick  = () =>{
+          console.log('time is ticking');
           this.setState({
               date: new Date(),
           })
       }
 
     render(){
-        const { count, date } = this.state;
+        const {  date } = this.state;
           return(
             <div>
                 <p> Time: {date.toLocaleTimeString()}</p>
