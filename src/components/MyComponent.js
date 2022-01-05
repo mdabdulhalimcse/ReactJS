@@ -20,6 +20,7 @@ export default function MyComponent (){
 
         return () => {
             console.log('component unmount!');
+            clearInterval(interval);
         }
     },[]);
 
