@@ -2,12 +2,21 @@ import { useEffect, useState } from "react";
 
 export default function MyComponent (){
     const [count, setCount] = useState(0);
-   const [text,setText] = useState('');
+    const [date, setDate] = useState(new Date());
+
+    const tick = () =>{
+        setDate(new Date());
+    }
 
     useEffect(() =>{
-        console.log('useEffect count is called or render');
+        console.log('updating document title');
         document.title = `Clicked ${count} times`;
-    },[count])
+    },[count]);
+
+    useEffect(() =>{
+        console.log('Starting timer clock');
+        setInterval(tick,1000);
+    },[]);
 
     const addClick = () => {
         setCount((prevState) => prevState + 1 );
@@ -15,9 +24,7 @@ export default function MyComponent (){
     
     return(
         <div>
-        <p> 
-            <input type="text" onChange={(e)  => setText(e.target.value)} />
-        </p>
+            <p>Time: {date.toLocaleTimeString("bn-BD")}</p>
             <p>
                 <button type="button" onClick={addClick}>Click</button>
             </p>
