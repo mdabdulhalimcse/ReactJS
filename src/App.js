@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import Button from "./components/Button";
 import ShowCount from "./components/ShowCount";
 import Title from "./components/Title";
@@ -7,15 +7,15 @@ export default function App(){
     const [count,setCount] = useState(0); 
     const [count2,setCount2] = useState(0); 
 
-    const addOne = () => {
-        console.log('render Function addOne');
-        setCount((prevState) => prevState + 1);
-    }
+    const addOne = useCallback(() => {
+      console.log('render Function addOne');
+      setCount((prevState) => prevState + 1);
+  },[])
 
-    const addFive = () => {
-        console.log('render Function addFive');
-        setCount2((prevState) => prevState + 5);
-    }
+    const addFive = useCallback(() => {
+      console.log('render Function addFive');
+      setCount2((prevState) => prevState + 5);
+  },[])
 
         return(
           <div>
