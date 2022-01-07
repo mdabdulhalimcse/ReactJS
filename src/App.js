@@ -8,10 +8,12 @@ export default function App(){
     const [count2,setCount2] = useState(0); 
 
     const addOne = () => {
+        console.log('render Function addOne');
         setCount((prevState) => prevState + 1);
     }
 
     const addFive = () => {
+        console.log('render Function addFive');
         setCount2((prevState) => prevState + 5);
     }
 
